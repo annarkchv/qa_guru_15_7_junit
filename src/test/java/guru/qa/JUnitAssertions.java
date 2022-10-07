@@ -21,6 +21,7 @@ public class JUnitAssertions {
     void secondJUnitTest() {
 
         Assertions.assertEquals("True", "True");
+//        comment
 
     }
 
