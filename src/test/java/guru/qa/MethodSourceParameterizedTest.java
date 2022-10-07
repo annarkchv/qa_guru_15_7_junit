@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class MethodSourceParameterizedTest {
 
-    static Stream<Arguments> checkInfoOnBookPageTest() {
+    static Stream<Arguments> bookNameAndDescription() {
 
         return Stream.of(
                 Arguments.of("Git Pocket Guide", List.of(
@@ -46,7 +46,7 @@ public class MethodSourceParameterizedTest {
         );
     }
 
-    @MethodSource
+    @MethodSource("bookNameAndDescription")
     @ParameterizedTest
     void checkInfoOnBookPageTest(String bookName, List<String > bookInfo) {
 
