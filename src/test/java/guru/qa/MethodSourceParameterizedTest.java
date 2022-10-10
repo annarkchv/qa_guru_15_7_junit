@@ -42,7 +42,6 @@ public class MethodSourceParameterizedTest {
                                 "language. If you want to keep your code efficient, more manageable, and up-to-da",
                         "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"
                 ))
-
         );
     }
 
@@ -53,7 +52,5 @@ public class MethodSourceParameterizedTest {
         open("https://demoqa.com/books");
         $$(".rt-tr-group .action-buttons").find(text(bookName)).click();
         $$(".profile-wrapper .col-md-9").shouldHave(CollectionCondition.texts(bookInfo));
-
     }
-
 }

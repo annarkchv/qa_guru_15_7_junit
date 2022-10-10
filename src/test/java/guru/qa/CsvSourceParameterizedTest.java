@@ -14,14 +14,12 @@ public class CsvSourceParameterizedTest {
             "Git Pocket Guide, Richard E. Silverman",
             "Learning JavaScript Design Patterns, Addy Osmani"
     })
+
     @ParameterizedTest(name = "Check info on Books page: {0}")
     void checkNameAndAuthorOnBookPageTest(String bookName, String authorName) {
-
         open("https://demoqa.com/books");
         $(byText(bookName)).click();
         $("#title-wrapper").shouldHave(text(bookName));
         $("#author-wrapper").shouldHave(text(authorName));
-
     }
-
 }

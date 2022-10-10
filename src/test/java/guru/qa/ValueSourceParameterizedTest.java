@@ -11,13 +11,11 @@ import static com.codeborne.selenide.Selenide.open;
 public class ValueSourceParameterizedTest {
 
     @ValueSource(strings = {"Git Pocket Guide", "Learning JavaScript Design Patterns"})
+
     @ParameterizedTest(name = "Check title on Books page: {0}")
     void checkTitleOnBookPageTest(String bookName) {
-
         open("https://demoqa.com/books");
         $(byText(bookName)).click();
         $("#title-wrapper").shouldHave(text(bookName));
-
     }
-
 }
